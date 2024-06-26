@@ -9,6 +9,9 @@ PIP Updater is a Python script designed to automatically upgrade all installed p
 - Uses the `subprocess` module to execute pip commands.
 - Prints out a log file of all the current updated packages that got updated.
 
+## Download the exe application
+[PiP-Updater](https://github.com/KernFerm/PIP-Updater/releases/tag/pip)
+
 ## Getting Started
 
 ### Dependencies
