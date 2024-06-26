@@ -21,8 +21,41 @@
 # SOFTWARE.
 
 import pkg_resources
-from subprocess import call
+from subprocess import check_call, CalledProcessError
+import logging
 
-packages = [dist.project_name for dist in pkg_resources.working_set]
-for package in packages:
-    call(f"pip install --upgrade {package}", shell=True)
+# Configure logging
+logging.basicConfig(level=logging.INFO, filename='update_packages.log', filemode='w',
+                    format='%(asctime)s - %(levelname)s - %(message)s')
+
+def update_packages():
+    packages = [dist.project_name for dist in pkg_resources.working_set]
+    updated_packages = []
+
+    for package in packages:
+        try:
+            result = check_call(f"pip install --upgrade {package}", shell=True)
+            if result == 0:
+                updated_packages.append(package)
+                logging.info(f"Successfully updated {package}")
+        except CalledProcessError as e:
+            logging.error(f"Failed to update {package}: {e}")
+
+    return updated_packages
+
+def log_updates(run_number, updated_packages):
+    logging.info(f"\nRun {run_number} completed. Updated packages:")
+    if updated_packages:
+        for package in updated_packages:
+            logging.info(f" - {package}")
+    else:
+        logging.info("No packages were updated.")
+
+# Run the updates twice
+for run in range(1, 3):
+    updated_packages = update_packages()
+    log_updates(run, updated_packages)
+
+# Print the log file content to the console
+with open('update_packages.log', 'r') as log_file:
+    print(log_file.read())
