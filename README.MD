@@ -28,7 +28,7 @@ PIP Updater is a Python script designed to automatically upgrade all installed p
 python main.py
 ```
 
-## ```markdown
+##
 # PIP Updater
 
 PIP Updater is a Python script designed to automatically upgrade all installed pip packages on a system. It simplifies the process of keeping Python packages up-to-date by iterating over all installed packages and upgrading them to their latest versions.
