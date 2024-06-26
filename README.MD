@@ -7,6 +7,7 @@ PIP Updater is a Python script designed to automatically upgrade all installed p
 - Automatically upgrades all installed pip packages.
 - Utilizes the `pkg_resources` module to list installed packages.
 - Uses the `subprocess` module to execute pip commands.
+- Prints out a log file of all the current updated packages that got updated.
 
 ## Getting Started
 
