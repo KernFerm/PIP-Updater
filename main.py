@@ -59,3 +59,6 @@ for run in range(1, 3):
 # Print the log file content to the console
 with open('update_packages.log', 'r') as log_file:
     print(log_file.read())
+
+# Keep the terminal window open
+input("Press any key to exit...")
