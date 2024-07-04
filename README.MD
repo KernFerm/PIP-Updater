@@ -14,7 +14,7 @@ PIP Updater is a Python script designed to automatically upgrade all installed p
 
 ### Dependencies
 
-- Python 3.x
+- Python 3.11.6 included   ( `adds python.exe to path automatically` )
 - pip
 
 ### Installing
