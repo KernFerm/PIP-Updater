@@ -15,7 +15,7 @@ PIP Updater is a Python script designed to automatically upgrade all installed p
 ### Dependencies
 
 - Python 3.11.6 included   ( `adds python.exe to path automatically` )
-        [Python 3.11.6 batch script](https://github.com/KernFerm/PIP-Updater/blob/main/py3.11.6_Installer.bat)
+        [Python 3.11.6 auto installer](https://github.com/KernFerm/PIP-Updater/blob/main/py3.11.6_Installer.bat)
 - pip
 
 ### Installing
